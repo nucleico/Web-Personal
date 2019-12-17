@@ -15,12 +15,17 @@ main {
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 5px;
+  height: 500px;
 }
 
 h1 {
   padding-bottom: 50px;
   text-align: right;
   width: 95%;
+}
+
+.mainTitle {
+  margin-top: 20px;
 }
 
 h3 {
@@ -37,6 +42,16 @@ input {
   margin: 10px 0 10px 0;
 }
 
+.div-img {
+  display: flex;
+  margin-left: 100px;
+}
+
+.div-img p {
+  line-height: 30px;
+  text-align: justify;
+}
+
 footer {
   height: 100px;
   color: white;
@@ -49,17 +64,24 @@ footer {
   background-color: #B21D1D;
 }
 
+.cont {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 205px;
+  left: 0;
+}
+
 .fa {
-  font-size: 30px;
-  width: 20px;
-  float: right;
+  font-size: 25px;
+  width: 15px;
+  height: 15px;
+  line-height: 22px;
   text-decoration: none;
   text-align: center;
-  border: solid 1px black;
-  padding: 21px;
-  padding-right: 36px;
-  margin: 23px;
-  margin-left: 3px;
+  padding: 15px;
+  padding-left: 10px;
+
 }
 
 .fa:hover {
@@ -95,6 +117,7 @@ footer {
 .fa-instagram {
   background: #125688;
   color: white;
+
 }
 
 .navClass > ul {
@@ -152,8 +175,4 @@ img {
 #guido-img {
   border-style: solid;
   border-width: 1px;
-}
-
-.div-img {
-  display: flex;
 }
