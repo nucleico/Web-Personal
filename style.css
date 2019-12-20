@@ -3,24 +3,6 @@ padding: 0;
 margin: 0;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-  .navClass {
-    width: 100%;
-  }
-  #guido-img {
-    display: none;
-  }
-  h1 {
-    text-align: center;
-  }
-  .mainText {
-    width: 300px;
-  }
-}
-
 body {
   background-color: white;
   font-family: Solway, Arial;
@@ -40,7 +22,7 @@ h3 {
 }
 
 p {
-  width: 95%;
+  width: 300px;
   text-align: center;
   padding-top: 50px;
   text-align: justify;
@@ -54,12 +36,16 @@ p {
   display: flex;
 }
 
+h1 {
+  text-align: center;
+}
 
 input {
   margin: 10px 0 10px 0;
 }
 
 #guido-img {
+  display: none;
   border-style: solid;
   border-width: 1px;
   width: 250px;
@@ -182,4 +168,17 @@ footer {
 .link, .link:hover {
   color: white;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .navClass {
+    width: 100%;
+  }
+  #guido-img {
+    display: block;
+  }
+
+  p {
+    width: 95%;
+    }
 }
