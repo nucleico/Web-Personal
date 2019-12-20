@@ -174,7 +174,7 @@ footer {
 
 @media only screen and (min-width: 400px) {
   .navClass > ul > li {
-    font-size: 16px;
+    font-size: 13px;
     padding: 5px 25px;
     }
     p {
