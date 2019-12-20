@@ -3,6 +3,24 @@ padding: 0;
 margin: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .navClass {
+    width: 100%;
+  }
+  #guido-img {
+    display: none;
+  }
+  h1 {
+    text-align: center;
+  }
+  .mainText {
+    width: 300px;
+  }
+}
+
 body {
   background-color: white;
   font-family: Solway, Arial;
