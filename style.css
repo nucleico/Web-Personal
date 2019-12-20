@@ -128,13 +128,15 @@ footer {
   background-color: #249F51;
   color: white;
   border-bottom: 1px solid black;
+  text-align: center;
 }
 
 .navClass > ul > li {
   display: inline-block;
   padding: 5px 25px;
   position: relative;
-  font-size: 13px;
+  font-size: 11px;
+
 }
 
 .sub-menu {
@@ -170,6 +172,12 @@ footer {
   text-decoration: none;
 }
 
+@media only screen and (min-width: 500px) {
+  .navClass > ul > li {
+    font-size: 13px;
+    }
+}
+
 @media only screen and (min-width: 600px) {
   .navClass {
     width: 100%;
@@ -181,6 +189,9 @@ footer {
     width: 95%;
     margin-left: 100px;
     padding-top: 50px;
+    }
+    .navClass > ul {
+      text-align: left;
     }
   .navClass > ul > li {
     font-size: 16px;
