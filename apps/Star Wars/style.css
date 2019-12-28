@@ -1,0 +1,46 @@
+body {
+  background-color: black;
+  font-family: Calibri;
+  color: white;
+  text-align: center;
+}
+
+img {
+  width: 250px;
+}
+
+button {
+  border: none;
+  font-family: Calibri;
+  height: 25px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
+}
+
+h2 {
+  line-height: 70px;
+  margin: 50px 50px 100px 50px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#photoOne {
+    width: 200px;
+    height: 200px;
+    margin-right: 25px;
+    border: 1px solid white;
+
+}
+
+#photoTwo {
+  width: 200px;
+  height: 200px;
+  margin-left: 25px;
+  border: 1px solid white;
+}
