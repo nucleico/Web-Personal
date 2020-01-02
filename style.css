@@ -63,7 +63,7 @@ footer {
   line-height: 50px;
   width: 100%;
   letter-spacing: 4px;
-  background-color: #42DB47;
+  background-color: #24A5FB;
   position: fixed;
   bottom: 0;
 }
@@ -125,7 +125,7 @@ footer {
 }
 
 .navClass > ul {
-  background-color: #249F51;
+  background-color: #1FD8A7;
   color: white;
   border-bottom: 1px solid black;
   text-align: center;
@@ -141,7 +141,7 @@ footer {
 
 .sub-menu {
   position: absolute;
-  background-color: #249F51;
+  background-color: #1FD8A7;
   color: white;
   width: 125px;
   padding-left: 0px;
@@ -163,7 +163,7 @@ footer {
   display: block;
   height: 50px;
   padding-top: 5px;
-  background-color:#249F51;
+  background-color:#1FD8A7;
   font-size: 15px;
 }
 

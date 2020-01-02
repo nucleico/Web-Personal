@@ -1,49 +1,143 @@
-const btnChg = document.querySelector(".changeChar");
-const fightBtn = document.querySelector(".fight");
+//queryselectors
 
-function getCharacters() {
-    let changeData = function (){
+const btnChg = document.querySelector(".changeChar");
+const firstRoundBtn = document.querySelector(".fightBtn");
+const fightTxt = document.querySelector(".fightText");
+
+let person = document.querySelector(".person");
+let height = document.querySelector(".height");
+let gender = document.querySelector(".gender");
+let birthYear = document.querySelector(".birthYear");
+let power = document.querySelector(".power");
+
+let person1 = document.querySelector(".person1");
+let height1 = document.querySelector(".height1");
+let gender1 = document.querySelector(".gender1");
+let birthYear1 = document.querySelector(".birthYear1");
+let power1 = document.querySelector(".power1");
+
+// create Elements
+
+let thirdRoundBtn = document.createElement("button");
+let thirdRoundEl = document.createElement("h1");
+let secondRoundBtn = document.createElement("button");
+
+async function getData() {
+
+  let changeData = function (){
       return Math.ceil(Math.random() * 9)};
 
-    let api_urlImg = changeData();
-    let api_urlImg1 = changeData();
+  let fullPower = function (){
+      return Math.ceil(Math.random() * 100)};
 
-    while (api_urlImg === api_urlImg1) {
-      api_urlImg1 = changeData();
-    }
+      let urlsImg = {
+        api_urlImg: changeData(),
+        api_urlImg1: changeData(),
+      }
 
-    let api_url = "https://swapi.co/api/people/" + api_urlImg;
-    let api_url1 = "https://swapi.co/api/people/" + api_urlImg1;
+      while (urlsImg.api_urlImg === urlsImg.api_urlImg1) {
+        urlsImg.api_urlImg1 = changeData();
+      }
 
-    while (api_url === api_url1) {
-      api_url1 = "https://swapi.co/api/people/" + changeData();
-    }
+      let urls = {
+        api_url: "https://swapi.co/api/people/" + urlsImg.api_urlImg,
+        api_url1: "https://swapi.co/api/people/" + urlsImg.api_urlImg1,
+      }
 
-  document.getElementById("photoOne").setAttribute("src", `img/${api_urlImg}.jpg`);
-  document.getElementById("photoTwo").setAttribute("src", `img/${api_urlImg1}.jpg`);
+      while (urls.api_url === urls.api_url1) {
+        urls.api_url1 = "https://swapi.co/api/people/" + changeData();
+      }
 
-  async function getData() {
+document.getElementById("photoOne").setAttribute("src", `img/${urlsImg.api_urlImg}.jpg`);
+document.getElementById("photoTwo").setAttribute("src", `img/${urlsImg.api_urlImg1}.jpg`);
 
-    const data = await fetch(api_url);
+    const data = await fetch(urls.api_url);
     const resp = await data.json();
 
-    document.querySelector(".person").textContent = resp.name;
-    document.querySelector(".height").textContent = resp.height;
-    document.querySelector(".gender").textContent = resp.gender;
-    document.querySelector(".birthYear").textContent = resp.birth_year;
+    let personData = resp.name;
+    person.textContent = personData;
+    let heightData = resp.height;
+    heightData = parseInt(heightData);
+    height.textContent = heightData;
+    gender.textContent = resp.gender;
+    birthYear.textContent = resp.birth_year;
+    let powerData = fullPower();
+    power.textContent = powerData;
 
-    const data1 = await fetch(api_url1);
+    const data1 = await fetch(urls.api_url1);
     const resp1 = await data1.json();
-    document.querySelector(".person1").textContent = resp1.name;
-    document.querySelector(".height1").textContent = resp1.height;
-    document.querySelector(".gender1").textContent = resp1.gender;
-    document.querySelector(".birthYear1").textContent = resp1.birth_year;
-  }
-  getData();
-}
 
-btnChg.addEventListener("click", function(){
-  getCharacters();
-  })
+    let personData1 = resp1.name;
+    person1.textContent = personData1;
+    let heightData1 = resp1.height;
+    heightData1 = parseInt(heightData1);
+    height1.textContent = heightData1;
+    gender1.textContent = resp1.gender;
+    birthYear1.textContent = resp1.birth_year;
+    let powerData1 = fullPower();
+    power1.textContent = powerData1;
 
-getCharacters();
+//round functions
+
+  function firstRound() {
+    let firstRoundEl = document.createElement("h1");
+    console.log(personData)
+    console.log(personData1)
+        if (heightData > heightData1) {
+            firstRoundEl.innerHTML = "";
+            firstRoundEl.innerHTML = `${personData} is taller, therefore the winner!`;
+            fightTxt.appendChild(firstRoundEl);
+        } else if (heightData < heightData1) {
+            firstRoundEl.innerHTML = "";
+            firstRoundEl.innerHTML = `${personData1} is taller, therefore the winner!`;
+            fightTxt.appendChild(firstRoundEl);
+        } else {
+            firstRoundEl.innerHTML = `Both characters are equally tall, it's a draw!`;
+            fightTxt.appendChild(firstRoundEl);
+        }
+          secondRoundBtn.innerHTML = "Go for Second Round!";
+          fightTxt.appendChild(secondRoundBtn);
+          secondRoundBtn.style.display = "block";
+        }
+
+        function secondRound(){
+
+          let secondRoundEl = document.createElement("h1");
+          console.log(personData)
+          console.log(personData1)
+          if (powerData > powerData1 && heightData > heightData1) {
+            secondRoundEl.innerHTML = "";
+            secondRoundEl.innerHTML = `${personData} has more full power, therefore wins the second round and the fight!`;
+            fightTxt.appendChild(secondRoundEl);
+          } else if (powerData < powerData1 && heightData < heightData1) {
+            secondRoundEl.innerHTML = "";
+            secondRoundEl.innerHTML = `${personData1} has more full power, therefore wins the second round and the fight!`;
+            fightTxt.appendChild(secondRoundEl);
+          } else if (powerData > powerData1 && heightData < heightData1){
+            secondRoundEl.innerHTML = "";
+            secondRoundEl.innerHTML = `${personData} has more full power, therefore wins the second round!`;
+            fightTxt.appendChild(secondRoundEl);
+            thirdRoundBtn.innerHTML = "Tiebreak!";
+            fightTxt.appendChild(thirdRoundBtn);
+          } else if (powerData < powerData1 && heightData > heightData1) {
+            secondRoundEl.innerHTML = "";
+            secondRoundEl.innerHTML = `${personData1} has more full power, therefore wins the second round!`;
+            fightTxt.appendChild(secondRoundEl);
+            thirdRoundBtn.innerHTML = "Tiebreak!";
+            fightTxt.appendChild(thirdRoundBtn);
+          }
+        }
+
+      function thirdRoundWinner() {
+        nameArr = [personData, personData1];
+        nameArr.sort();
+        thirdRoundEl.innerHTML = `In alphabetical order, ${nameArr[0]} is the winner, congratulations!`;
+        fightTxt.appendChild(thirdRoundEl);
+      }
+// Event Listeners
+firstRoundBtn.addEventListener("click", firstRound);
+secondRoundBtn.addEventListener("click", secondRound);
+thirdRoundBtn.addEventListener("click", thirdRoundWinner);
+    }
+
+getData();
