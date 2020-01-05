@@ -54,6 +54,45 @@ input {
   margin-top: 25px;
 }
 
+.container {
+  margin: 0 auto;
+
+}
+
+.gridRow {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+
+}
+
+.zone {
+  height: 250px;
+  width: 300px;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: #C8C5C5;
+  position: relative;
+}
+
+.zone:hover {
+  background-color: grey;
+}
+
+.link .textApp {
+  color: black;
+  position: absolute;
+  left: 5px;
+  top: 160px;
+}
+
+#appImg {
+width: 100%;
+height: 60%;
+}
+
 footer {
   height: 50px;
   color: white;
@@ -129,6 +168,7 @@ footer {
   color: white;
   border-bottom: 1px solid black;
   text-align: center;
+
 }
 
 .navClass > ul > li {
@@ -136,6 +176,7 @@ footer {
   padding: 5px 15px;
   position: relative;
   font-size: 11px;
+    z-index: 1;
 
 }
 

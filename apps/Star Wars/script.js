@@ -15,6 +15,8 @@ let height1 = document.querySelector(".height1");
 let gender1 = document.querySelector(".gender1");
 let birthYear1 = document.querySelector(".birthYear1");
 let power1 = document.querySelector(".power1");
+let photoOne = document.getElementById("photoUno");
+let photoTwo = document.getElementById("photoDos");
 
 // create Elements
 
@@ -23,6 +25,7 @@ let thirdRoundEl = document.createElement("h1");
 let secondRoundBtn = document.createElement("button");
 
 async function getData() {
+
 
   let changeData = function (){
       return Math.ceil(Math.random() * 9)};
@@ -48,11 +51,11 @@ async function getData() {
         urls.api_url1 = "https://swapi.co/api/people/" + changeData();
       }
 
-document.getElementById("photoOne").setAttribute("src", `img/${urlsImg.api_urlImg}.jpg`);
-document.getElementById("photoTwo").setAttribute("src", `img/${urlsImg.api_urlImg1}.jpg`);
+document.getElementById("photoUno").setAttribute("src", `img/${urlsImg.api_urlImg}.jpg`);
+document.getElementById("photoDos").setAttribute("src", `img/${urlsImg.api_urlImg1}.jpg`);
 
-    const data = await fetch(urls.api_url);
-    const resp = await data.json();
+    let data = await fetch(urls.api_url);
+    let resp = await data.json();
 
     let personData = resp.name;
     person.textContent = personData;
@@ -64,8 +67,8 @@ document.getElementById("photoTwo").setAttribute("src", `img/${urlsImg.api_urlIm
     let powerData = fullPower();
     power.textContent = powerData;
 
-    const data1 = await fetch(urls.api_url1);
-    const resp1 = await data1.json();
+    let data1 = await fetch(urls.api_url1);
+    let resp1 = await data1.json();
 
     let personData1 = resp1.name;
     person1.textContent = personData1;
@@ -80,9 +83,10 @@ document.getElementById("photoTwo").setAttribute("src", `img/${urlsImg.api_urlIm
 //round functions
 
   function firstRound() {
-    let firstRoundEl = document.createElement("h1");
     console.log(personData)
     console.log(personData1)
+
+    let firstRoundEl = document.createElement("h1");
         if (heightData > heightData1) {
             firstRoundEl.innerHTML = "";
             firstRoundEl.innerHTML = `${personData} is taller, therefore the winner!`;
@@ -103,16 +107,17 @@ document.getElementById("photoTwo").setAttribute("src", `img/${urlsImg.api_urlIm
         function secondRound(){
 
           let secondRoundEl = document.createElement("h1");
-          console.log(personData)
-          console.log(personData1)
           if (powerData > powerData1 && heightData > heightData1) {
             secondRoundEl.innerHTML = "";
             secondRoundEl.innerHTML = `${personData} has more full power, therefore wins the second round and the fight!`;
             fightTxt.appendChild(secondRoundEl);
+            photoOne.classList.add("winnerPhoto");
+
           } else if (powerData < powerData1 && heightData < heightData1) {
             secondRoundEl.innerHTML = "";
             secondRoundEl.innerHTML = `${personData1} has more full power, therefore wins the second round and the fight!`;
             fightTxt.appendChild(secondRoundEl);
+            photoTwo.classList.add("winnerPhoto");
           } else if (powerData > powerData1 && heightData < heightData1){
             secondRoundEl.innerHTML = "";
             secondRoundEl.innerHTML = `${personData} has more full power, therefore wins the second round!`;
@@ -133,11 +138,22 @@ document.getElementById("photoTwo").setAttribute("src", `img/${urlsImg.api_urlIm
         nameArr.sort();
         thirdRoundEl.innerHTML = `In alphabetical order, ${nameArr[0]} is the winner, congratulations!`;
         fightTxt.appendChild(thirdRoundEl);
+        if (nameArr[0] === personData) {
+          photoOne.classList.add("winnerPhoto");
+        } else {
+          photoTwo.classList.add("winnerPhoto");
+        }
       }
 // Event Listeners
 firstRoundBtn.addEventListener("click", firstRound);
 secondRoundBtn.addEventListener("click", secondRound);
 thirdRoundBtn.addEventListener("click", thirdRoundWinner);
+
+btnChg.addEventListener("click", function(){
+      getData();
+})
     }
+
+
 
 getData();

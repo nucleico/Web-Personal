@@ -51,18 +51,23 @@ h2 {
   justify-content: center;
 }
 
-#photoOne {
+#photoUno {
     width: 200px;
     height: 200px;
     margin-right: 25px;
     border: 1px solid white;
 }
 
-#photoTwo {
+#photoDos {
   width: 200px;
   height: 200px;
   margin-left: 25px;
   border: 1px solid white;
+}
+
+.winnerPhoto {
+  -webkit-box-shadow: 0px 0px 17px 16px #E2FF3B;
+  box-shadow: 0px 0px 17px 16px #E2FF3B;
 }
 
 .fightText {
