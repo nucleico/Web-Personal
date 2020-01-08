@@ -55,11 +55,12 @@ input {
 }
 
 .container {
-  margin: 0 auto;
+  margin-top: 25px;
 
 }
 
 .gridRow {
+
 display: flex;
 flex-flow: row wrap;
 justify-content: space-around;
@@ -77,20 +78,25 @@ justify-content: space-around;
   position: relative;
 }
 
-.zone:hover {
-  background-color: grey;
+.zone:hover, #appImg:hover {
+  opacity: 0.5;
 }
 
 .link .textApp {
+  width: 75%;
   color: black;
   position: absolute;
-  left: 5px;
-  top: 160px;
+  left: 55px;
+  top: 175px;
 }
 
 #appImg {
 width: 100%;
 height: 60%;
+}
+
+.textApp {
+  font-family: 'Montserrat', sans-serif;
 }
 
 footer {
@@ -113,6 +119,11 @@ footer {
   position: fixed;
   top: 205px;
   left: 0;
+}
+
+.contactBox {
+  text-align: center;
+  margin-top: 25px;
 }
 
 .fa {
@@ -168,7 +179,6 @@ footer {
   color: white;
   border-bottom: 1px solid black;
   text-align: center;
-
 }
 
 .navClass > ul > li {
@@ -235,6 +245,10 @@ footer {
     margin-left: 100px;
     padding-top: 50px;
     }
+    .container {
+      margin-top: 75px;
+
+    }
   .navClass > ul {
       text-align: left;
     }
@@ -245,5 +259,11 @@ footer {
   .mainTitle {
     text-align: right;
     width: 95%;
+    }
+    .contactBox {
+     position: absolute;
+      top: 150px;
+      left: 300px;
+      text-align: center;
     }
 }
