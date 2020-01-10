@@ -79,10 +79,10 @@ justify-content: space-around;
 }
 
 .zone:hover, #appImg:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
-.link .textApp {
+.linkApp .textApp {
   width: 75%;
   color: black;
   position: absolute;
@@ -171,7 +171,6 @@ footer {
 .fa-instagram {
   background: #125688;
   color: white;
-
 }
 
 .navClass > ul {
@@ -186,8 +185,11 @@ footer {
   padding: 5px 15px;
   position: relative;
   font-size: 11px;
-    z-index: 1;
+  z-index: 1;
+}
 
+.navClass > ul > li:hover {
+    opacity: 0.7;
 }
 
 .sub-menu {
@@ -213,7 +215,7 @@ footer {
 .navHover:hover .sub-menu li{
   display: block;
   height: 50px;
-  padding-top: 5px;
+  padding-top: 5px;  
   background-color:#1FD8A7;
   font-size: 15px;
 }
