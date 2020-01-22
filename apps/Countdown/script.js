@@ -1,73 +1,59 @@
-let pauseBtn = document.querySelector(".pause");
-let startBtn = document.querySelector(".start");
-let resetBtn = document.querySelector(".reset");
-let timerDisplay = document.querySelector('.time');
-let running = false;
-let paused = false;
-let startTime;
-let updatedTime;
-let interval;
-let difference;
-let savedTime;
+const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random"
+const quoteDisplayElement = document.getElementById("quoteDisplay")
+const quoteInputElement = document.getElementById("quoteInput")
+const timerElement = document.getElementById("timer")
 
-function startTimer() {
-  if (!running) {
-      startTime = new Date().getTime();
-      interval = setInterval(getTime, 1);
-      paused = false;
-      running = true;
-  }
-}
-
-function pauseTimer() {
-    if (!difference) {
-    } else if (!paused) {
-      clearInterval(interval);
-      savedTime = difference;
-      paused = true;
-      running = false;
+quoteInputElement.addEventListener("input", () => {
+  const arrayQuote = quoteDisplayElement.querySelectorAll("span")
+  const arrayValue = quoteInputElement.value.split("")
+  let correct = true;
+  arrayQuote.forEach((char, index) => {
+    const character = arrayValue[index]
+    if (character === null) {
+      char.classList.remove("correct")
+      char.classList.remove("incorrect")
+      correct = false
+    } else if (character === char.innerText) {
+      char.classList.add("correct")
+      char.classList.remove("incorrect")
     } else {
-      startTimer();
-    }
-
-}
-
-function resetTimer() {
-
-  clearInterval(interval);
-  paused = false;
-  difference = 0;
-  savedTime = 0;
-  running = false;
-
-
-}
-
-function getTime() {
-    updatedTime = new Date().getTime();
-    if (savedTime) {
-    difference = (updatedTime - startTime) + savedTime;
-  } else {
-    difference = updatedTime - startTime;
-  }
-
-  var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    var milliseconds = Math.floor((difference % (1000 * 60)) / 100);
-    hours = (hours < 10) ? "0" + hours : hours;
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-    // milliseconds = (milliseconds < 100) ? (milliseconds < 10) ? "00" + milliseconds : "0" + milliseconds : milliseconds;
-   if (milliseconds < 100) {
-      if (milliseconds < 10) {
-          milliseconds = "00" + milliseconds;
-      } else {
-        milliseconds = "0" + milliseconds;
+      char.classList.remove("correct")
+      char.classList.add("incorrect")
+      correct = false
       }
-    } else {
-     milliseconds
-    }
-    timerDisplay.innerHTML = hours + ':' + minutes + ':' + seconds + ':' + milliseconds;
+    })
+  if (correct) renderNewQuote();
+})
 
+function getRandomQuote() {
+  return fetch(RANDOM_QUOTE_API_URL)
+    .then(response => response.json())
+    .then(data => data.content)
 }
+
+async function renderNewQuote() {
+  const quote = await getRandomQuote();
+  quoteDisplayElement.innerHTML = "";
+  quote.split("").forEach(character => {
+    const characterSpan = document.createElement("span")
+    characterSpan.innerText = character;
+    quoteDisplayElement.appendChild(characterSpan)
+  })
+  quoteInputElement.value = null;
+  startTimer();
+}
+
+let startTime;
+function startTimer() {
+  timerElement.innerText = 0;
+  startTime = new Date()
+  setInterval(() => {
+    timer.innerText = getTimerTime();
+  }, 1000);
+}
+
+function getTimerTime() {
+  return Math.floor((new Date() - startTime) / 1000)
+}
+
+renderNewQuote();

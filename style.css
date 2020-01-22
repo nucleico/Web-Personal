@@ -22,21 +22,51 @@ h3 {
 
 p {
   font-family: Solway, Arial;
-  width: 70%;
-  text-align: center;
-  padding-top: 30px;
-  text-align: justify;
-  margin-left: 75px;
-  margin-bottom: 100px;
-  line-height: 35px;
 }
 
 .cont-mainPage {
-  display: flex;
+  text-align: center;
+  text-align: justify;
+  width: 63%;
+  margin-left: 75px;
+  line-height: 35px;
+  margin-bottom: -35px;
+}
+.cont-mainPage p {
+  margin-bottom: -30px;
+}
+
+.skills {
+  margin-top: 10px;
+}
+
+.skillsW {
+  color:green;
+  font-size: 20px
+}
+
+.skillsCont {
+  margin-left: 35px;
+  list-style-type: none;
 }
 
 h1 {
   text-align: center;
+}
+
+.aboutTitle {
+  text-align: left;
+  margin-left: 75px;
+  margin-top: 25px;
+}
+
+.aboutContainer {
+  padding-top: 10px;
+  padding-left: 90px;
+  width: 500px;
+  line-height: 35px;
+  padding-bottom: 60px;
+
 }
 
 input {
@@ -56,7 +86,6 @@ input {
 
 .container {
   margin-top: 25px;
-
 }
 
 .gridRow {
@@ -99,6 +128,13 @@ height: 60%;
   font-family: 'Montserrat', sans-serif;
 }
 
+.aboutLink {
+  text-decoration: none;
+}
+.aboutLink:visited {
+  color: black;
+}
+
 footer {
   height: 50px;
   color: white;
@@ -138,6 +174,11 @@ footer {
 
 }
 
+.fa-star {
+  font-size: 15px;
+  margin-right: -15px;
+}
+
 .fa:hover {
     opacity: 0.5;
     text-decoration: none;
@@ -148,7 +189,7 @@ footer {
   color: white;
 }
 
-.fa-twitter {
+.fa-github {
   background: #55ACEE;
   color: white;
 }
@@ -165,11 +206,6 @@ footer {
 
 .fa-youtube {
   background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
   color: white;
 }
 
@@ -215,7 +251,7 @@ footer {
 .navHover:hover .sub-menu li{
   display: block;
   height: 50px;
-  padding-top: 5px;  
+  padding-top: 5px;
   background-color:#1FD8A7;
   font-size: 15px;
 }
@@ -240,17 +276,21 @@ footer {
     width: 100%;
   }
   #guido-img {
-    display: block;
+    display: inline;
+    position: absolute;
+    top: 100px;
+    right: 50px;
   }
-  p {
-    width: 95%;
-    margin-left: 100px;
-    padding-top: 50px;
-    }
-    .container {
-      margin-top: 75px;
-
-    }
+  .cont-mainPage {
+    text-align: center;
+    text-align: justify;
+    width: 88%;
+    margin-left: 90px;
+    line-height: 45px;
+  }
+  .cont-mainPage p {
+    margin-bottom: 10px;
+  }
   .navClass > ul {
       text-align: left;
     }
