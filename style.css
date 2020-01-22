@@ -130,6 +130,7 @@ height: 60%;
 
 .aboutLink {
   text-decoration: none;
+  color: black;
 }
 .aboutLink:visited {
   color: black;
