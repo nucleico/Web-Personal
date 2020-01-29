@@ -52,17 +52,22 @@ h1 {
 
 .aboutTitle {
   text-align: left;
-  margin-left: 75px;
+  margin-left: 90px;
   margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 .aboutContainer {
   padding-top: 10px;
   padding-left: 90px;
-  width: 500px;
+  width: 700px;
   line-height: 35px;
-  padding-bottom: 60px;
+  margin-bottom: 25px;  
 
+}
+
+.endContainer {
+  margin-bottom: 75px;
 }
 
 input {
@@ -85,7 +90,6 @@ input {
 }
 
 .gridRow {
-
 display: flex;
 flex-flow: row wrap;
 justify-content: space-around;
