@@ -1,14 +1,14 @@
-const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random"
-const quoteDisplayElement = document.getElementById("quoteDisplay")
-const quoteInputElement = document.getElementById("quoteInput")
-const timerElement = document.getElementById("timer")
+const fraseAleatoria = "http://api.quotable.io/random"
+const fraseElemento = document.getElementById("fraseE")
+const fraseInput = document.getElementById("fraseInput")
+const contador = document.getElementById("contador")
 
-quoteInputElement.addEventListener("input", () => {
-  const arrayQuote = quoteDisplayElement.querySelectorAll("span")
-  const arrayValue = quoteInputElement.value.split("")
+fraseInput.addEventListener("input", () => {
+  const arrayFrase = fraseElemento.querySelectorAll("span")
+  const arrayValor = fraseInput.value.split("")
   let correct = true;
-  arrayQuote.forEach((char, index) => {
-    const character = arrayValue[index]
+  arrayFrase.forEach((char, index) => {
+    const character = arrayValor[index]
     if (character === null) {
       char.classList.remove("correct")
       char.classList.remove("incorrect")
@@ -26,26 +26,26 @@ quoteInputElement.addEventListener("input", () => {
 })
 
 function getRandomQuote() {
-  return fetch(RANDOM_QUOTE_API_URL)
+  return fetch(fraseAleatoria)
     .then(response => response.json())
     .then(data => data.content)
 }
 
 async function renderNewQuote() {
   const quote = await getRandomQuote();
-  quoteDisplayElement.innerHTML = "";
+  fraseElemento.innerHTML = "";
   quote.split("").forEach(character => {
     const characterSpan = document.createElement("span")
     characterSpan.innerText = character;
-    quoteDisplayElement.appendChild(characterSpan)
+    fraseElemento.appendChild(characterSpan)
   })
-  quoteInputElement.value = null;
+  fraseInput.value = null;
   startTimer();
 }
 
 let startTime;
 function startTimer() {
-  timerElement.innerText = 0;
+  contador.innerText = 0;
   startTime = new Date()
   setInterval(() => {
     timer.innerText = getTimerTime();
