@@ -1,5 +1,6 @@
 const fraseAleatoria = "https://api.quotable.io/random"
 const fraseElemento = document.getElementById("fraseE")
+const author = document.getElementById("author")
 const fraseInput = document.getElementById("fraseInput")
 const contador = document.getElementById("contador")
 
@@ -31,8 +32,15 @@ function getRandomQuote() {
     .then(data => data.content)
 }
 
+function getAuthorQuote() {
+  return fetch(fraseAleatoria)
+    .then(response => response.json())
+    .then(data => data.author)
+}
+
 async function renderNewQuote() {
   const quote = await getRandomQuote();
+  const authorV = await getAuthorQuote();
   fraseElemento.innerHTML = "";
   quote.split("").forEach(character => {
     const characterSpan = document.createElement("span")
@@ -40,6 +48,7 @@ async function renderNewQuote() {
     fraseElemento.appendChild(characterSpan)
   })
   fraseInput.value = null;
+  author.textContent = "("+authorV+")";
   startTimer();
 }
 
