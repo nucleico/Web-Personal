@@ -48,7 +48,7 @@ function startTimer() {
   contador.innerText = 0;
   startTime = new Date()
   setInterval(() => {
-    timer.innerText = getTimerTime();
+    contador.innerText = getTimerTime();
   }, 1000);
 }
 
