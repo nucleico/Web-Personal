@@ -1,4 +1,4 @@
-const fraseAleatoria = "http://api.quotable.io/random"
+const fraseAleatoria = "https://api.quotable.io/random"
 const fraseElemento = document.getElementById("fraseE")
 const fraseInput = document.getElementById("fraseInput")
 const contador = document.getElementById("contador")
