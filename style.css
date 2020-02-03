@@ -7,7 +7,7 @@ body {
   background-color: white;
   font-family: 'Source Sans Pro', sans-serif;
   color: black;
-  height: 500px;
+  margin-bottom: 80px;
 }
 
 .mainTitle {
@@ -25,11 +25,12 @@ h3 {
   text-align: justify;
   width: 63%;
   margin-left: 75px;
-  line-height: 35px;
-  margin-bottom: -35px;
+  margin-top: 15px;
+  line-height: 35px; 
+
 }
 .cont-mainPage p {
-  margin-bottom: -30px;
+  margin-bottom: 30px;
 }
 
 .skills {
@@ -38,11 +39,11 @@ h3 {
 
 .skillsW {
   color:green;
-  font-size: 20px
+  font-size: 20px;
 }
 
 .skillsCont {
-  margin-left: 35px;
+  margin-left: 0;
   list-style-type: none;
 }
 
@@ -52,18 +53,24 @@ h1 {
 
 .aboutTitle {
   text-align: left;
-  margin-left: 90px;
   margin-top: 25px;
   margin-bottom: 30px;
+  padding-left: 60px;  
+  
 }
 
 .aboutContainer {
   padding-top: 10px;
-  padding-left: 90px;
-  width: 700px;
+  padding-left: 60px;
   line-height: 35px;
   margin-bottom: 25px;  
+  width: 75%;
+  text-align: justify;
+}
 
+.aboutShort {
+  font-size: 16px; 
+  width: 70%;
 }
 
 .endContainer {
@@ -148,7 +155,7 @@ footer {
   letter-spacing: 4px;
   background-color: #24A5FB;
   position: fixed;
-  bottom: 0;
+  bottom: 0;  
 }
 
 .cont {
@@ -276,6 +283,11 @@ footer {
     }
 }
 
+.fa-star {
+  font-size: 10px;
+  margin-right: -25px;
+}
+
 @media only screen and (min-width: 600px) {
   .navClass {
     width: 100%;
@@ -293,10 +305,25 @@ footer {
     margin-left: 90px;
     line-height: 45px;
   }
+
+  .aboutContainer {    
+    width: 700px;
+    padding-left: 100px;  
+  }
+
+  .aboutTitle {
+    padding-left: 100px;  
+  }
+  
   .cont-mainPage p {
     margin-bottom: 10px;
   }
-  .navClass > ul {
+
+  .fa-star {
+    font-size: 15px;
+  }
+
+    .navClass > ul {
       text-align: left;
     }
   .navClass > ul > li {
@@ -312,5 +339,12 @@ footer {
       top: 150px;
       left: 300px;
       text-align: center;
+    }
+    .skillsCont {
+      margin-left: 35px;
+    }
+    .aboutShort {
+      font-size: 18px; 
+      width: 80%;
     }
 }
