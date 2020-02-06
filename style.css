@@ -1,6 +1,6 @@
 * {
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -11,7 +11,8 @@ body {
 }
 
 .mainTitle {
-  margin-top: 30px;
+  margin-top: 25px;
+  padding-left: 10px;
   text-align: center;
   width: 95%;
 }
@@ -23,11 +24,11 @@ h3 {
 .cont-mainPage {
   text-align: center;
   text-align: justify;
-  width: 63%;
-  margin-left: 75px;
-  margin-top: 15px;
-  line-height: 35px; 
+  width: 75%;
 
+  margin-top: 15px;
+  line-height: 35px;
+  padding-left: 60px;
 }
 .cont-mainPage p {
   margin-bottom: 30px;
@@ -38,7 +39,7 @@ h3 {
 }
 
 .skillsW {
-  color:green;
+  color: green;
   font-size: 20px;
 }
 
@@ -55,21 +56,20 @@ h1 {
   text-align: left;
   margin-top: 25px;
   margin-bottom: 30px;
-  padding-left: 60px;  
-  
+  padding-left: 60px;
 }
 
 .aboutContainer {
   padding-top: 10px;
   padding-left: 60px;
   line-height: 35px;
-  margin-bottom: 25px;  
+  margin-bottom: 25px;
   width: 75%;
   text-align: justify;
 }
 
 .aboutShort {
-  font-size: 16px; 
+  font-size: 16px;
   width: 70%;
 }
 
@@ -97,10 +97,9 @@ input {
 }
 
 .gridRow {
-display: flex;
-flex-flow: row wrap;
-justify-content: space-around;
-
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .zone {
@@ -111,11 +110,16 @@ justify-content: space-around;
   margin-top: 15px;
   margin-bottom: 10px;
   margin-left: 50px;
-  background-color: #C8C5C5;
+  background-color: #c8c5c5;
   position: relative;
+  border-radius: 10%;
+  -webkit-box-shadow: 10px 18px 49px -19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 18px 49px -19px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 18px 49px -19px rgba(0, 0, 0, 0.75);
 }
 
-.zone:hover, #appImg:hover {
+.zone:hover,
+#appImg:hover {
   opacity: 0.75;
 }
 
@@ -128,8 +132,10 @@ justify-content: space-around;
 }
 
 #appImg {
-width: 100%;
-height: 60%;
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
 }
 
 .textApp {
@@ -153,9 +159,9 @@ footer {
   line-height: 50px;
   width: 100%;
   letter-spacing: 4px;
-  background-color: #24A5FB;
+  background-color: #24a5fb;
   position: fixed;
-  bottom: 0;  
+  bottom: 0;
 }
 
 .cont {
@@ -180,7 +186,6 @@ footer {
   text-align: center;
   padding: 15px;
   padding-left: 10px;
-
 }
 
 .fa-star {
@@ -189,17 +194,17 @@ footer {
 }
 
 .fa:hover {
-    opacity: 0.5;
-    text-decoration: none;
-  }
+  opacity: 0.5;
+  text-decoration: none;
+}
 
 .fa-facebook {
-  background: #3B5998;
+  background: #3b5998;
   color: white;
 }
 
 .fa-github {
-  background: #55ACEE;
+  background: #55acee;
   color: white;
 }
 
@@ -218,10 +223,8 @@ footer {
   color: white;
 }
 
-
-
 .navClass > ul {
-  background-color: #1FD8A7;
+  background-color: #1fd8a7;
   color: white;
   border-bottom: 1px solid black;
   text-align: center;
@@ -241,34 +244,34 @@ footer {
 
 .sub-menu {
   position: absolute;
-  background-color: #1FD8A7;
+  background-color: #1fd8a7;
   color: white;
   width: 125px;
   padding-left: 0px;
   margin-left: -25px;
-  width: 110px;  
+  width: 110px;
 }
-
 
 .sub-menu li {
   padding-left: 15px;
   font-size: 15px;
-  overflow:hidden;
+  overflow: hidden;
   height: 0;
-  -webkit-transition:height 200ms ease-in;
-  -moz-transition:height 200ms ease-in;
-  -o-transition:height 200ms ease-in;
-  transition:height 200ms ease-in;
-  }
+  -webkit-transition: height 200ms ease-in;
+  -moz-transition: height 200ms ease-in;
+  -o-transition: height 200ms ease-in;
+  transition: height 200ms ease-in;
+}
 
-.navHover:hover .sub-menu li{
+.navHover:hover .sub-menu li {
   display: block;
   height: 50px;
   padding-top: 5px;
-  background-color:#1FD8A7;  
+  background-color: #1fd8a7;
 }
 
-.link, .link:hover {
+.link,
+.link:hover {
   color: white;
   text-decoration: none;
 }
@@ -277,10 +280,10 @@ footer {
   .navClass > ul > li {
     font-size: 13px;
     padding: 5px 25px;
-    }
-    p {
-      width: 75%;
-    }
+  }
+  p {
+    width: 75%;
+  }
 }
 
 .fa-star {
@@ -301,20 +304,20 @@ footer {
   .cont-mainPage {
     text-align: center;
     text-align: justify;
-    width: 88%;
+    max-width: 88%;
     margin-left: 90px;
     line-height: 45px;
   }
 
-  .aboutContainer {    
-    width: 700px;
-    padding-left: 100px;  
+  .aboutContainer {
+    max-width: 700px;
+    padding-left: 100px;
   }
 
   .aboutTitle {
-    padding-left: 100px;  
+    padding-left: 100px;
   }
-  
+
   .cont-mainPage p {
     margin-bottom: 10px;
   }
@@ -323,28 +326,28 @@ footer {
     font-size: 15px;
   }
 
-    .navClass > ul {
-      text-align: left;
-    }
+  .navClass > ul {
+    text-align: left;
+  }
   .navClass > ul > li {
     font-size: 16px;
     padding: 5px 25px;
-    }
+  }
   .mainTitle {
     text-align: right;
     width: 95%;
-    }
-    .contactBox {
-     position: absolute;
-      top: 150px;
-      left: 300px;
-      text-align: center;
-    }
-    .skillsCont {
-      margin-left: 35px;
-    }
-    .aboutShort {
-      font-size: 18px; 
-      width: 80%;
-    }
+  }
+  .contactBox {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    text-align: center;
+  }
+  .skillsCont {
+    margin-left: 35px;
+  }
+  .aboutShort {
+    font-size: 18px;
+    width: 80%;
+  }
 }
