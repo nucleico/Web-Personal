@@ -1,7 +1,7 @@
 const apps = [
   {
     name: 'TodoList',
-    description: 'Agregar actividades, hacerlas, seguir',
+    description: 'Agregar actividades, hacerlas, seguir.',
     img: 'todo.png',
     route: 'Todo%20List/todo.html',
     class: 'todoApp'
@@ -22,7 +22,7 @@ const apps = [
   },
   {
     name: 'Word',
-    description: 'Completá frases en el menor tiempo posible',
+    description: 'Completá frases en el menor tiempo posible.',
     img: 'word.png',
     route: 'Countdown/index.html',
     class: 'wordApp'

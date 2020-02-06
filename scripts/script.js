@@ -3,7 +3,7 @@ const navDiv = document.createElement('div');
 navDiv.innerHTML = `<nav class="navClass">
 <ul>
  <li><a class="link" href="index.html"><span class="op">Home</span></a></li>
- <li><a class="link" href="about.html"><span class="op">About</span></a></li>
+ <li><a class="link" href="about.html"><span class="op">Sobre mí</span></a></li>
  <li class="navHover link"><a class="link" href="portfolio.html"><span class="op">Portfolio</span></a>
    <ul class="sub-menu">
      <li><a class="link" href="apps/tip/tip.html">Tip Calculator</a></li>
@@ -24,7 +24,7 @@ lateralBarDiv.innerHTML = `<div class="cont">
 <a href="#" class="fa fa-facebook"></a>
 <a href="https://github.com/nucleico/Web-Personal" class="fa fa-github"></a>
 <a href="#" class="fa fa-google"></a>
-<a href="https://www.linkedin.com/in/guido-valenzuela-575658173" class="fa fa-linkedin"></a>
+<a href="https://www.linkedin.com/in/guidovalenzuela/" class="fa fa-linkedin"></a>
 <a href="#" class="fa fa-youtube"></a>
 </div> `;
 const lateralBarDivF = lateralBar.appendChild(lateralBarDiv);
