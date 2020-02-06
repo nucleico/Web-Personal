@@ -26,6 +26,13 @@ const apps = [
     img: 'word.png',
     route: 'Countdown/index.html',
     class: 'wordApp'
+  },
+  {
+    name: 'TennisSearch',
+    description: 'Info de los mejores tenistas.',
+    img: 'word.png',
+    route: 'tennisPlayers/tennis-players/build/index.html',
+    class: 'tennisApp'
   }
 ];
 
