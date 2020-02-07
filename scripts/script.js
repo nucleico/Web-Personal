@@ -28,4 +28,4 @@ lateralBarDiv.innerHTML = `<div class="cont">
 <a href="#" class="fa fa-youtube"></a>
 </div> `;
 const lateralBarDivF = lateralBar.appendChild(lateralBarDiv);
-lateralBarDivF.classList.add('cont'); //comment
+lateralBarDivF.classList.add('cont'); //commen

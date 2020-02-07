@@ -29,7 +29,7 @@ const apps = [
   },
   {
     name: 'TennisSearch',
-    description: 'Info de los mejores tenistas del mundo.',
+    description: 'Info de los mejores tenistas del mundo',
     img: 'word.png',
     route: '',
     class: 'tennisApp'
