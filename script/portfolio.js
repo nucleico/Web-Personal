@@ -33,6 +33,13 @@ const apps = [
     img: 'tennis.png',
     route: 'https://nucleico.github.io/tennisApp1/',
     class: 'tennisApp'
+  },
+  {
+    name: 'Progress Bar',
+    description: 'Barra de progreso con setInterval',
+    img: 'progressBar.png',
+    route: 'apps/progressBar/index.html',
+    class: 'progressBarApp'
   }
 ];
 

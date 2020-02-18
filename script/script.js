@@ -11,6 +11,7 @@ navDiv.innerHTML = `<nav class="navClass">
      <li><a class="link" href="apps/Star%20Wars/index.html">Star Wars App</li>
        <li><a class="link" href="apps/Countdown/index.html">Word App</li>
        <li> <a class="link" href="https://nucleico.github.io/tennisApp1/">Tennis Search</li>
+       <li><a class="link" href="apps/progressBar/index.html">Progress Bar</a></li>
    </ul></li>
  <li><a class="link" href="contact.html"><span class="op">Contacto</span></a></li>
 </ul>
