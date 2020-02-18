@@ -1,4 +1,4 @@
-const navClassUp = document.querySelector('.navClassUp');
+const navClassUp = document.querySelector('.navClassUp'); //jeje
 const navDiv = document.createElement('div');
 navDiv.innerHTML = `<nav class="navClass">
 <ul>
@@ -24,7 +24,7 @@ const lateralBar = document.querySelector('.lateralBar');
 const lateralBarDiv = document.createElement('div');
 lateralBarDiv.innerHTML = `<div class="cont">
 <a href="#" class="fa fa-facebook"></a>
-<a href="https://github.com/nucleico/Web-Personal" class="fa fa-github"></a>
+<a href="https://github.com/nucleico/projects" class="fa fa-github"></a>
 <a href="#" class="fa fa-google"></a>
 <a href="https://www.linkedin.com/in/guidovalenzuela/" class="fa fa-linkedin"></a>
 <a href="#" class="fa fa-youtube"></a>
