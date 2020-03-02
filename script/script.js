@@ -6,6 +6,7 @@ navDiv.innerHTML = `<nav class="navClass">
  <li><a class="link" href="about.html"><span class="op">Sobre mí</span></a></li>
  <li class="navHover link"><a class="link" href="portfolio.html"><span class="op">Portfolio</span></a>
    <ul class="sub-menu">
+   <li><a class="link" href="apps/tictac/index.html">Ta Te Ti</a></li>
      <li><a class="link" href="apps/tip/tip.html">Tip Calculator</a></li>
      <li> <a class="link" href="apps/Todo%20List/todo.html">Todo List</li>
      <li><a class="link" href="apps/Star%20Wars/index.html">Star Wars App</li>

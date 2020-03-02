@@ -1,5 +1,12 @@
 const apps = [
   {
+    name: 'Ta Te Ti',
+    description: 'Simple juego de Ta Te Ti en JS.',
+    img: 'tateti.png',
+    route: 'apps/tictac/index.html',
+    class: 'tatetiApp'
+  },
+  {
     name: 'TodoList',
     description: 'Agregar actividades, hacerlas, seguir.',
     img: 'todo.png',
