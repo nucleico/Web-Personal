@@ -20,7 +20,7 @@ startGame();
 
 function startGame() {
   turnX = true;
-  mensaje.style.display = 'none';
+  mensaje.innerText = '';
   cell.forEach(cell => {
     cell.classList.remove(x);
     cell.classList.remove(o);
@@ -42,10 +42,12 @@ function hacerClick(e) {
   let claseActual = turnX ? x : o;
   marcar(cellElegida, claseActual);
   if (victoria(claseActual)) {
-    mensaje.style.display = 'block';
+    mensaje.innerText = `Gana el que maneja ${claseActual.toUpperCase()}!`;
     cell.forEach(cell => {
       cell.removeEventListener('click', hacerClick);
     });
+  } else if (empate()) {
+    mensaje.innerText = 'Empate!';
   } else {
     cambiarTurno();
   }
@@ -57,4 +59,10 @@ function cambiarTurno() {
 
 function marcar(cell, claseActual) {
   cell.classList.add(claseActual);
+}
+
+function empate() {
+  return [...cell].every(
+    celda => celda.classList.contains(x) || celda.classList.contains(o)
+  );
 }

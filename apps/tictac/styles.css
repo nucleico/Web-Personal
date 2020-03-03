@@ -9,9 +9,17 @@ body {
   padding: 0;
 }
 
+.titulo {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container {
   width: 500px;
-  height: 500px;
+
+  height: 550px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -84,7 +92,6 @@ body {
 }
 
 .mensaje {
-  display: none;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
