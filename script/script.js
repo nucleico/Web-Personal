@@ -24,11 +24,11 @@ navDivF.classList.add('navClass');
 const lateralBar = document.querySelector('.lateralBar');
 const lateralBarDiv = document.createElement('div');
 lateralBarDiv.innerHTML = `<div class="cont">
-<a href="#" class="fa fa-facebook"></a>
-<a href="https://github.com/nucleico/projects" class="fa fa-github"></a>
-<a href="#" class="fa fa-google"></a>
-<a href="https://www.linkedin.com/in/guidovalenzuela/" class="fa fa-linkedin"></a>
-<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fab fa-facebook"></a>
+<a href="https://github.com/nucleico/projects" class="fab fa-github"></a>
+<a href="#" class="fab fa-google"></a>
+<a href="https://www.linkedin.com/in/guidovalenzuela/" class="fab fa-linkedin"></a>
+<a href="#" class="fab fa-youtube"></a>
 </div> `;
 const lateralBarDivF = lateralBar.appendChild(lateralBarDiv);
 lateralBarDivF.classList.add('cont'); //commen
