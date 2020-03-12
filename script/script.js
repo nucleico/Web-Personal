@@ -1,29 +1,25 @@
-const navClassUp = document.querySelector('.navClassUp'); //jeje
+const navClassUp = document.querySelector('.navClassUp');
 const navDiv = document.createElement('div');
-navDiv.innerHTML = `<nav class="navClass">
-<ul>
- <li><a class="link" href="index.html"><span class="op">Home</span></a></li>
+
+navDiv.innerHTML = `
+<ul id="navBarUl">
+<i class="fas fa-battery-full"></i>
+<li><a class="link" href="index.html"><span class="op">Home</span></a></li>
  <li><a class="link" href="about.html"><span class="op">Sobre mí</span></a></li>
  <li class="navHover link"><a class="link" href="portfolio.html"><span class="op">Portfolio</span></a>
-   <ul class="sub-menu">
-   <li><a class="link" href="apps/tictac/index.html">Ta Te Ti</a></li>
-     <li><a class="link" href="apps/tip/tip.html">Tip Calculator</a></li>
-     <li> <a class="link" href="apps/Todo%20List/todo.html">Todo List</li>
-     <li><a class="link" href="apps/Star%20Wars/index.html">Star Wars App</li>
-       <li><a class="link" href="apps/Countdown/index.html">Word App</li>
-       <li> <a class="link" href="https://nucleico.github.io/tennisApp1/">Tennis Search</li>
-       <li><a class="link" href="apps/progressBar/index.html">Progress Bar</a></li>
-   </ul></li>
+   </li>
  <li><a class="link" href="contact.html"><span class="op">Contacto</span></a></li>
-</ul>
+</ul> 
 <hr id="hr"> 
-</nav>`;
+`;
 const navDivF = navClassUp.appendChild(navDiv);
 navDivF.classList.add('navClass');
+// navDivF.style.display = 'none';
+const bar = document.querySelector('#navBarUl');
 
 const lateralBar = document.querySelector('.lateralBar');
 const lateralBarDiv = document.createElement('div');
-lateralBarDiv.innerHTML = `<div class="cont">
+lateralBarDiv.innerHTML = `<div class="lateralBarContainer">
 <a href="#" class="fab fa-facebook"></a>
 <a href="https://github.com/nucleico/projects" class="fab fa-github"></a>
 <a href="#" class="fab fa-google"></a>
@@ -32,3 +28,20 @@ lateralBarDiv.innerHTML = `<div class="cont">
 </div> `;
 const lateralBarDivF = lateralBar.appendChild(lateralBarDiv);
 lateralBarDivF.classList.add('cont'); //commen
+
+let lines = document.querySelector('.lines');
+let line = document.querySelectorAll('.line');
+let barFolded = true;
+
+lines.addEventListener('click', function() {
+  line.forEach(function(item) {
+    item.classList.toggle('cruz');
+    if (barFolded) {
+      bar.style.transform = 'translate(100%, 0)';
+      bar.style.transition = 'all 1s ease';
+    } else {
+      bar.style.transform = 'translate(-100%, 0)';
+    }
+    barFolded = !barFolded;
+  });
+});

@@ -52,11 +52,11 @@ const apps = [
 
 const appsArr = apps
   .map(app => {
-    return `<a class="linkApp" href="${app.route}"> <div class="zone ${app.class}"><img id="appImg" src="./img/${app.img}" alt=""><span class="textApp">${app.description}</span> </div> </a>`;
+    return `<a class="linkApp" href="${app.route}"> <div class="eachApp ${app.class}"><img id="appImg" src="./img/${app.img}" alt=""><span class="textApp">${app.description}</span> </div> </a>`;
   })
   .join('');
 
-const container = document.querySelector('.container');
+const container = document.querySelector('.portfolioContainer');
 const appsDiv = document.createElement('div');
 appsDiv.innerHTML = appsArr;
 const appsArrF = container.appendChild(appsDiv);

@@ -12,12 +12,27 @@
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="navClassUp"></div>
+    <div class="navBarTop">
+      <span class="guido">GUIDO</span>
+
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="navClassUp">
+      <nav class="navClassUp2"></nav>
+    </div>
 
     <main>
       <div class="lateralBar"></div>
@@ -78,7 +93,17 @@
         <img id="guido-img" src="img/guido.jpg" alt="" />
       </div>
     </main>
+    <!-- 
+    <script>
+      let lines = document.querySelector('.lines');
+      let line = document.querySelectorAll('.line');
 
+      lines.addEventListener('click', function() {
+        line.forEach(function(item) {
+          item.classList.toggle('cruz');
+        });
+      });
+    </script> -->
     <footer>
       GUIDO VALENZUELA (2019)
     </footer>
