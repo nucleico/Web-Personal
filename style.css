@@ -213,6 +213,7 @@ footer {
   display: flex;
   flex-direction: column;
   position: fixed;
+  z-index: 3;
   top: 205px;
   right: 0;
 }
@@ -220,9 +221,11 @@ footer {
 .burgerDiv {
   margin-top: 10px;
   margin-left: 15px;
+  cursor: pointer;
 }
 .burgerLines {
   width: 33px;
+
   height: 4px;
   margin-bottom: 5px;
   background: #0f6434;
@@ -301,6 +304,37 @@ footer {
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  #mainTitle {
+    text-align: center;
+  }
+
+  .navBarLeftUl {
+    width: 25%;
+  }
+  .navBarLeftUl > li {
+    font-size: 18px;
+  }
+  .contactBox {
+    left: 20px;
+    width: 300px;
+  }
+  .cont-mainPage p {
+    width: 250px;
+  }
+
+  .aboutContainer,
+  .aboutTitle {
+    padding-left: 40px;
+    width: 250px;
+  }
+  .eachApp {
+    height: 250px;
+    width: 300px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
 @media only screen and (max-width: 1250px) {
   #guido-img {
     display: none;

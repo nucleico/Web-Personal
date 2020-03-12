@@ -12,7 +12,6 @@ navBarLeftSelector.innerHTML = `
 </ul> 
 <hr > 
 `;
-navBarLeftSelector.classList.add('navClass');
 
 // Barra de Redes Sociales
 

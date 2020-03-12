@@ -56,8 +56,6 @@ const appsArr = apps
   })
   .join('');
 
-const container = document.querySelector('.portfolioContainer');
-const appsDiv = document.createElement('div');
-appsDiv.innerHTML = appsArr;
-const appsArrF = container.appendChild(appsDiv);
-appsArrF.classList.add('gridRow');
+const portfolioContainer = document.querySelector('.portfolioContainer');
+portfolioContainer.innerHTML = appsArr;
+portfolioContainer.classList.add('gridRow');
