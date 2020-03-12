@@ -1,46 +1,45 @@
-const navClassUp = document.querySelector('.navClassUp');
-const navDiv = document.createElement('div');
+//Barra de Navegacion Lateral
 
-navDiv.innerHTML = `
-<ul id="navBarUl">
+const navBarLeftSelector = document.querySelector('.navBarLeft');
+navBarLeftSelector.innerHTML = `
+<ul class="navBarLeftUl">
 <i class="fas fa-battery-full"></i>
-<li><a class="link" href="index.html"><span class="op">Home</span></a></li>
- <li><a class="link" href="about.html"><span class="op">Sobre mí</span></a></li>
- <li class="navHover link"><a class="link" href="portfolio.html"><span class="op">Portfolio</span></a>
+<li><a href="index.html">Home</a></li>
+ <li><a href="about.html">Sobre mí</a></li>
+ <li><a href="portfolio.html">Portfolio</a>
    </li>
- <li><a class="link" href="contact.html"><span class="op">Contacto</span></a></li>
+ <li><a href="contact.html">Contacto</a></li>
 </ul> 
-<hr id="hr"> 
+<hr > 
 `;
-const navDivF = navClassUp.appendChild(navDiv);
-navDivF.classList.add('navClass');
-// navDivF.style.display = 'none';
-const bar = document.querySelector('#navBarUl');
+navBarLeftSelector.classList.add('navClass');
 
-const lateralBar = document.querySelector('.lateralBar');
-const lateralBarDiv = document.createElement('div');
-lateralBarDiv.innerHTML = `<div class="lateralBarContainer">
+// Barra de Redes Sociales
+
+const lateralBarSelector = document.querySelector('.lateralBar');
+lateralBarSelector.innerHTML = `<div class="lateralBarContainer">
 <a href="#" class="fab fa-facebook"></a>
 <a href="https://github.com/nucleico/projects" class="fab fa-github"></a>
 <a href="#" class="fab fa-google"></a>
 <a href="https://www.linkedin.com/in/guidovalenzuela/" class="fab fa-linkedin"></a>
 <a href="#" class="fab fa-youtube"></a>
 </div> `;
-const lateralBarDivF = lateralBar.appendChild(lateralBarDiv);
-lateralBarDivF.classList.add('cont'); //commen
 
-let lines = document.querySelector('.lines');
-let line = document.querySelectorAll('.line');
+// Barra superior y Burger
+
+const navBarLeft = document.querySelector('.navBarLeftUl');
+const burgerDiv = document.querySelector('.burgerDiv');
+const burgerLines = document.querySelectorAll('.burgerLines');
 let barFolded = true;
 
-lines.addEventListener('click', function() {
-  line.forEach(function(item) {
+burgerDiv.addEventListener('click', function() {
+  burgerLines.forEach(function(item) {
     item.classList.toggle('cruz');
     if (barFolded) {
-      bar.style.transform = 'translate(100%, 0)';
-      bar.style.transition = 'all 1s ease';
+      navBarLeft.style.transform = 'translate(100%, 0)';
+      navBarLeft.style.transition = 'all 1s ease';
     } else {
-      bar.style.transform = 'translate(-100%, 0)';
+      navBarLeft.style.transform = 'translate(-100%, 0)';
     }
     barFolded = !barFolded;
   });

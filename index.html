@@ -21,23 +21,20 @@
   </head>
   <body>
     <div class="navBarTop">
-      <span class="guido">GUIDO</span>
-
-      <div class="lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <span id="guido">GUIDO</span>
+      <div class="burgerDiv">
+        <div class="burgerLines"></div>
+        <div class="burgerLines"></div>
+        <div class="burgerLines"></div>
       </div>
     </div>
 
-    <div class="navClassUp">
-      <nav class="navClassUp2"></nav>
-    </div>
+    <div class="navBarLeft"></div>
 
     <main>
       <div class="lateralBar"></div>
 
-      <h1 class="mainTitle">Guido, un desarrollador web más</h1>
+      <h1 id="mainTitle">Guido, un desarrollador web más</h1>
 
       <div class="cont-mainPage">
         <p>Bienvenidos a mi sitio web personal!</p>
@@ -72,38 +69,23 @@
 
         <hr />
 
-        <div class="skills">
-          <div class="skillsW">Skills</div>
-          <ul class="skillsCont">
-            <li><i class="fab fa-js"></i>Javascript</li>
-            <li><i class="fab fa-bootstrap"></i>Bootstrap Framework</li>
-            <li><i class="fab fa-css3-alt"></i>CSS3</li>
-            <li><i class="fab fa-html5"></i>HTML5</li>
-            <li><i class="fab fa-react"></i>React</li>
-            <li><i class="fab fa-java"></i>Java</li>
-            <li><i class="fas fa-server"></i>JSON</li>
-            <li><i class="fas fa-database"></i>MySQL</li>
-            <li><i class="fas fa-power-off"></i>Command Line Interface</li>
-            <li><i class="fas fa-sim-card"></i>Object Oriented Programming</li>
-          </ul>
-        </div>
+        <div id="skillsTitle">Skills</div>
+        <ul id="skillsCont">
+          <li><i class="fab fa-js"></i>Javascript</li>
+          <li><i class="fab fa-bootstrap"></i>Bootstrap Framework</li>
+          <li><i class="fab fa-css3-alt"></i>CSS3</li>
+          <li><i class="fab fa-html5"></i>HTML5</li>
+          <li><i class="fab fa-react"></i>React</li>
+          <li><i class="fab fa-java"></i>Java</li>
+          <li><i class="fas fa-server"></i>JSON</li>
+          <li><i class="fas fa-database"></i>MySQL</li>
+          <li><i class="fas fa-power-off"></i>Command Line Interface</li>
+          <li><i class="fas fa-sim-card"></i>Object Oriented Programming</li>
+        </ul>
       </div>
 
-      <div class="div-img">
-        <img id="guido-img" src="img/guido.jpg" alt="" />
-      </div>
+      <img id="guido-img" src="img/guido.jpg" alt="" />
     </main>
-    <!-- 
-    <script>
-      let lines = document.querySelector('.lines');
-      let line = document.querySelectorAll('.line');
-
-      lines.addEventListener('click', function() {
-        line.forEach(function(item) {
-          item.classList.toggle('cruz');
-        });
-      });
-    </script> -->
     <footer>
       GUIDO VALENZUELA (2019)
     </footer>

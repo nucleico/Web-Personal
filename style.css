@@ -3,10 +3,6 @@
   margin: 0;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   background-color: white;
   font-family: 'Source Sans Pro', sans-serif;
@@ -14,16 +10,8 @@ body {
   margin-bottom: 80px;
 }
 
-h1 {
-  text-align: center;
-}
-
 h3 {
   font-size: 18px;
-}
-
-input {
-  margin: 10px 0 10px 0;
 }
 
 footer {
@@ -40,7 +28,7 @@ footer {
   bottom: 0;
 }
 
-.mainTitle {
+#mainTitle {
   margin-top: 25px;
   padding-left: 10px;
   text-align: right;
@@ -53,22 +41,19 @@ footer {
   max-width: 80%;
   margin-left: 35px;
   line-height: 45px;
-  
 }
 .cont-mainPage p {
   margin-bottom: 30px;
 }
 
-.skills {
+#skillsTitle {
+  color: green;
+  font-size: 20px;
   margin-top: 10px;
 }
 
-.skillsW {
-  color: green;
-  font-size: 20px;
-}
-
-.skillsCont {
+#skillsCont {
+  margin-top: 10px;
   list-style-type: none;
   margin-left: 35px;
 }
@@ -159,6 +144,7 @@ footer {
   position: absolute;
   left: 55px;
   top: 175px;
+  font-family: 'Verdana', sans-serif;
 }
 
 #appImg {
@@ -168,8 +154,59 @@ footer {
   border-top-right-radius: 10%;
 }
 
-.textApp {
-  font-family: 'Verdana', sans-serif;
+.contactBox {
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.navBarTop {
+  height: 35px;
+  background-color: #1fd8a7;
+  border-bottom: 1px solid black;
+  font-size: 35px;
+  padding: 5px;
+  padding-bottom: 15px;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  font-family: Montserrat, sans-serif;
+}
+
+#guido {
+  margin-left: 10px;
+}
+
+.navBarLeftUl {
+  background-color: #1fd8a7;
+  color: white;
+  border-bottom: 1px solid black;
+  text-align: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -25%;
+  width: 22%;
+  z-index: 1;
+  padding-top: 18px;
+}
+
+.navBarLeftUl > li {
+  font-size: 20px;
+  margin-top: 20px;
+  position: relative;
+  color: white;
+}
+
+.navBarLeftUl > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.navBarLeftUl > li > a:hover {
+  opacity: 0.7;
 }
 
 .lateralBarContainer {
@@ -180,91 +217,11 @@ footer {
   right: 0;
 }
 
-.contactBox {
-  position: absolute;
-  top: 150px;
-  left: 300px;
-  text-align: center;
-}
-
-.navBarTop {
-  height: 35px;
-  background-color: #1fd8a7;
-  border-bottom: 1px solid black;
-  font-size: 35px;
-  padding: 5px;
-  padding-bottom: 15px;
-  display: flex;  
-  position: relative;
-  z-index: 2;
-  font-family: Montserrat;   
-  
-}
-
-#navBarUl {
-  background-color: #1fd8a7;
-  color: white;
-  border-bottom: 1px solid black;
-  text-align: center;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: -25%;  
-  width: 22%;
-  z-index: 1;
-  padding-top: 18px;    
-}
-
-#navBarUl > li {
-  font-size: 20px;
-  margin-top: 20px;
-  position: relative;  
-  color: white;
-}
-
-.op:hover {
-  opacity: 0.7;
-}
-
-.sub-menu {
-  position: absolute;
-  background-color: #1fd8a7;
-  color: white;
-  width: 125px;
-  padding-left: 0px;
-  margin-left: -25px;
-  width: 110px;
-}
-
-.sub-menu li {
-  padding-left: 15px;
-  font-size: 15px;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: height 300ms ease-in;
-  -moz-transition: height 300ms ease-in;
-  -o-transition: height 300ms ease-in;
-  transition: height 300ms ease-in;
-}
-
-.navHover:hover .sub-menu li {
-  display: block;
-  height: 50px;
-  padding-top: 5px;
-  background-color: #1fd8a7;
-}
-
-.link,
-.link:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.lines {
+.burgerDiv {
   margin-top: 10px;
   margin-left: 15px;
 }
-.line {
+.burgerLines {
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
@@ -344,7 +301,8 @@ footer {
   color: white;
 }
 
- @media only screen and (max-width: 1250px){
-#guido-img {
-  display: none;
+@media only screen and (max-width: 1250px) {
+  #guido-img {
+    display: none;
+  }
 }
