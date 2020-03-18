@@ -1,5 +1,13 @@
 const apps = [
   {
+    name: 'Marvel App',
+    description:
+      'Buscar personajes y comics de Marvel (desarrollada en React con Marvel API).',
+    img: 'marvellogo.png',
+    route: 'https://guarded-spire-04377.herokuapp.com/',
+    class: 'marvelApp'
+  },
+  {
     name: 'Ta Te Ti',
     description: 'Simple juego de Ta Te Ti en JS.',
     img: 'tateti.png',
