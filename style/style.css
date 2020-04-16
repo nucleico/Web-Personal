@@ -14,21 +14,6 @@ h3 {
   font-size: 18px;
 }
 
-footer {
-  height: 50px;
-  color: white;
-  font-weight: bolder;
-  font-family: Solway, Arial;
-  text-align: center;
-  line-height: 50px;
-  width: 100%;
-  letter-spacing: 4px;
-  background-color: #24a5fb;
-  position: fixed;
-  bottom: 0;
-  z-index: 3;
-}
-
 #mainTitle {
   margin-top: 25px;
   padding-left: 10px;
@@ -156,16 +141,15 @@ footer {
 }
 
 .contactBox {
-  position: absolute;
-  top: 150px;
-  left: 300px;
   text-align: center;
+  margin-top: 50px;
   line-height: 45px;
+  width: 100%;
 }
 
 .navBarTop {
   height: 35px;
-  background-color: #1fd8a7;
+  background-color: #110768;
   border-bottom: 1px solid black;
   font-size: 35px;
   padding: 5px;
@@ -178,10 +162,11 @@ footer {
 
 #guido {
   margin-left: 10px;
+  color: rgb(199, 194, 194);
 }
 
 .navBarLeftUl {
-  background-color: #1fd8a7;
+  background-color: #1d137c;
   color: white;
   border-bottom: 1px solid black;
   text-align: center;
@@ -229,7 +214,7 @@ footer {
 
   height: 4px;
   margin-bottom: 5px;
-  background: #0f6434;
+  background: rgb(231, 219, 219);
   border-radius: 5px;
   display: block;
   transform-origin: left top;
@@ -242,7 +227,7 @@ footer {
 
 .cruz:first-child {
   transform: rotate(45deg);
-  background-color: black;
+  background-color: rgb(231, 219, 219);
   transform-origin: 0% 0%;
 }
 
@@ -252,7 +237,7 @@ footer {
 
 .cruz:nth-child(3) {
   transform: rotate(-45deg);
-  background-color: black;
+  background-color: rgb(231, 219, 219);
   transform-origin: 15% 100%;
 }
 
@@ -411,7 +396,7 @@ footer {
     font-size: 18px;
   }
   .contactBox {
-    left: 20px;
+    margin-left: 30px;
     width: 300px;
   }
   .cont-mainPage p {

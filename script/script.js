@@ -26,6 +26,7 @@ lateralBarSelector.innerHTML = `<div class="lateralBarContainer">
 const navBarLeft = document.querySelector('.navBarLeftUl');
 const burgerDiv = document.querySelector('.burgerDiv');
 const burgerLines = document.querySelectorAll('.burgerLines');
+const main = document.querySelector('main');
 let barFolded = true;
 
 burgerDiv.addEventListener('click', function () {
@@ -39,4 +40,14 @@ burgerDiv.addEventListener('click', function () {
     }
     barFolded = !barFolded;
   });
+});
+
+main.addEventListener('click', function () {
+  if (!barFolded) {
+    burgerLines.forEach(function (item) {
+      item.classList.toggle('cruz');
+    });
+    navBarLeft.style.transform = 'translate(-100%, 0)';
+    barFolded = !barFolded;
+  }
 });
