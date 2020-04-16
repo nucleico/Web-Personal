@@ -42,7 +42,7 @@ const appsArr = apps
     <div class="imgBx">
     <a href="${app.route}">
       <img
-        src= "img/${app.img}"
+        src= "./img/${app.img}"
         alt="images">
         
         </a>
