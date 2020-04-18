@@ -7,6 +7,13 @@ const apps = [
     class: 'marvelApp',
   },
   {
+    name: 'Chat App',
+    description: 'Chat App (desarrollada con node.js y socket.io)',
+    img: 'chat.png',
+    route: 'apps/Chat%20App/index.html',
+    class: 'chatApp',
+  },
+  {
     name: 'Ta Te Ti',
     description: 'Simple juego de Ta Te Ti en JS.',
     img: 'tictactoeA.jpg',

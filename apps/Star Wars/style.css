@@ -9,15 +9,6 @@ img {
   width: 250px;
 }
 
-button {
-  border: none;
-  font-family: Calibri;
-  height: 25px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
-
 h2 {
   line-height: 70px;
   margin: 50px 50px 100px 50px;

@@ -9,6 +9,10 @@ body {
   margin-bottom: 45px;
 }
 
+main {
+  height: 100vh;
+}
+
 h3 {
   font-size: 18px;
 }
