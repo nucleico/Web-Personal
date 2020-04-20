@@ -6,13 +6,13 @@ const apps = [
     route: 'https://guarded-spire-04377.herokuapp.com/',
     class: 'marvelApp',
   },
-  // {
-  //   name: 'Chat App',
-  //   description: 'Chat App (desarrollada con node.js y socket.io)',
-  //   img: 'chat.png',
-  //   route: 'apps/Chat%20App/index.html',
-  //   class: 'chatApp',
-  // },
+  {
+    name: 'Chat App',
+    description: 'Chat App (desarrollada con node.js y socket.io)',
+    img: 'chat.png',
+    route: 'https://fierce-oasis-03933.herokuapp.com/',
+    class: 'chatApp',
+  },
   {
     name: 'Ta Te Ti',
     description: 'Simple juego de Ta Te Ti en JS.',
