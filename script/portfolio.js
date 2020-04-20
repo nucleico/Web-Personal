@@ -11,7 +11,7 @@ const apps = [
     description: 'Chat App (desarrollada con node.js y socket.io)',
     img: 'chat.png',
     route: 'https://fierce-oasis-03933.herokuapp.com/',
-    class: 'chatApp',
+    class: 'chatapp',
   },
   {
     name: 'Ta Te Ti',
