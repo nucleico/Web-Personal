@@ -15,9 +15,10 @@ const apps = [
   },
   {
     name: 'Ta Te Ti',
-    description: 'Simple juego de Ta Te Ti en JS.',
+    description:
+      'Ta Te Ti en JS (con Auth hecho con Node, noSQL DB con Mongoose).',
     img: 'tictactoeA.jpg',
-    route: 'apps/tictac/index.html',
+    route: 'https://calm-taiga-61752.herokuapp.com/',
     class: 'tatetiApp',
   },
   {
