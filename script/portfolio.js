@@ -23,7 +23,8 @@ const apps = [
   },
   {
     name: 'Type the Word',
-    description: 'Completá frases en el menor tiempo posible.',
+    description:
+      'Completá frases en el menor tiempo posible. (Vanilla Javascript)',
     img: 'wordA.jpg',
     route: 'apps/Countdown/index.html',
     class: 'wordApp',
