@@ -54,14 +54,12 @@ hr {
   width: 99vw;
   background-color: white;
   padding-top: 15px;
-
-  height: 250px;
+  height: 300px;
 }
 
 .contactCont p {
   margin-left: 65px;
   margin-top: 55px;
-  margin-bottom: 50px;
 }
 
 .titlesIndex {
@@ -120,7 +118,7 @@ hr {
   border-width: 1px;
   margin-left: 25px;
   margin-right: 25px;
-  height: 400px;
+  height: 330px;
   position: fixed;
   top: 150px;
   right: 50px;
