@@ -43,12 +43,28 @@ hr {
   -webkit-box-shadow: 0px -3px 6px -4px #919191;
   box-shadow: 0px -3px 6px -4px #919191;
   width: 99vw;
-  height: 620px;
+  height: 380px;
   background-color: white;
   padding-top: 15px;
 }
 
-#skillsTitle {
+.contactCont {
+  -webkit-box-shadow: 0px -3px 6px -4px #919191;
+  box-shadow: 0px -3px 6px -4px #919191;
+  width: 99vw;
+  background-color: white;
+  padding-top: 15px;
+
+  height: 250px;
+}
+
+.contactCont p {
+  margin-left: 65px;
+  margin-top: 55px;
+  margin-bottom: 50px;
+}
+
+.titlesIndex {
   color: green;
   font-size: 20px;
   margin-left: 35px;
@@ -59,6 +75,11 @@ hr {
   margin-top: 10px;
   list-style-type: none;
   margin-left: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: '. .' '. .' '. .';
 }
 
 .aboutTitle {
@@ -156,13 +177,6 @@ hr {
   height: 60%;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
-}
-
-.contactBox {
-  text-align: center;
-  margin-top: 50px;
-  line-height: 45px;
-  width: 100%;
 }
 
 .navBarTop {
