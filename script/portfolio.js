@@ -36,13 +36,6 @@ const apps = [
     route: 'https://nucleico.github.io/tennisApp1/',
     class: 'tennisApp',
   },
-  {
-    name: 'Star Wars Matchup',
-    description: 'Enfrentá a tus personajes favoritos de Star Wars.',
-    img: 'starwarsA.jpeg',
-    route: 'apps/Star%20Wars/index.html',
-    class: 'starWarsApp',
-  },
 ];
 
 const appsArr = apps
