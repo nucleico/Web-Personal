@@ -80,27 +80,6 @@ hr {
   grid-template-areas: '. .' '. .' '. .';
 }
 
-.aboutTitle {
-  text-align: left;
-  margin-top: 25px;
-  margin-bottom: 30px;
-  padding-left: 60px;
-}
-
-.aboutContainer {
-  padding-top: 10px;
-  padding-left: 60px;
-  line-height: 35px;
-  margin-bottom: 25px;
-  width: 75%;
-  text-align: justify;
-}
-
-.aboutShort {
-  font-size: 18px;
-  width: 80%;
-}
-
 .aboutLink {
   text-decoration: none;
   color: black;
@@ -421,6 +400,7 @@ hr {
 
   #mainTitle {
     text-align: center;
+    width: 75%;
     margin-bottom: 25px;
   }
 
@@ -430,19 +410,32 @@ hr {
   .navBarLeftUl > li {
     font-size: 18px;
   }
-  .contactBox {
-    margin-left: 30px;
-    width: 300px;
-  }
+
   .cont-mainPage p {
-    width: 250px;
+    width: 280px;
   }
 
-  .aboutContainer,
-  .aboutTitle {
-    padding-left: 40px;
-    width: 250px;
+  .skillContainer {
+    height: 650px;
   }
+
+  #skillsUl {
+    margin-left: 40px;
+    display: block;
+  }
+
+  .contactCont {
+    width: 80%;
+    height: 380px;
+  }
+
+  .contactCont p {
+    margin-left: 40px;
+    margin-top: 30px;
+    width: 280px;
+    line-height: 45px;
+  }
+
   .eachApp {
     height: 250px;
     width: 300px;
